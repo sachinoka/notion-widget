@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #d45d73;
+  --dark-pink: #9d3049;
+  --bg: #f7efed;
+  --card: #fffaf8;
+  --text: #4d4547;
+  --line: #ead7dc;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    "Noto Sans JP",
+    sans-serif;
+
+  color: var(--text);
+}
+
+.widget {
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 16px;
+
+  border: 1px solid #e5c7ce;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.8);
+  color: var(--dark-pink);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+.card {
+  min-height: 310px;
+  padding: 42px 28px 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid var(--line);
+  border-radius: 28px;
+
+  background: var(--card);
+
+  box-shadow:
+    0 18px 45px rgba(100, 50, 60, .10);
+}
+
+.rule {
+  margin-bottom: 20px;
+
+  color: var(--pink);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+.quote {
+  color: var(--dark-pink);
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    "Noto Serif JP",
+    serif;
+
+  font-size: clamp(28px, 8vw, 38px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.detail {
+  max-width: 330px;
+  margin: 20px auto 0;
+
+  color: #655b5d;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.open-info {
+  margin-top: 25px;
+
+  color: #aa9b9f;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 15px 18px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--pink);
+  color: white;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 22px rgba(158, 48, 71, .20);
+
+  transition:
+    transform .15s ease,
+    opacity .15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.note {
+  margin: 13px 10px 0;
+
+  color: #96898d;
+
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.fade {
+  animation: fadeIn .5s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
